@@ -1,0 +1,43 @@
+<p>new-component works!</p>
+<hr>
+
+<h1>{{title}}</h1>
+<h2>{{name}}</h2>
+<h3>{{age}}</h3>
+
+<ul>
+  <li *ngFor="let name of arrayNames">{{name}}</li>
+</ul>
+<hr>
+
+@for (name of arrayNames; track $index) {
+  <h1>{{name}}</h1>
+}
+<hr>
+
+<h1 *ngIf="willApparece; else notWillApparece">Im apparence</h1>
+<ng-template #notWillApparece>
+  <h2>Im not apparence</h2>
+</ng-template>
+
+<hr>
+
+@if (willApparece) {
+  <h3>true</h3>
+} @else {
+  <h3>false</h3>
+}
+
+<hr>
+
+<h5 style="background-color: lightcoral">text of h5</h5>
+<h5 [ngStyle]="{'background-color':'lightcoral', 'color': 'lightGreen'}">text of h5 with ngStyle</h5>
+<h5 [ngStyle]="{'font-size': bigFont + 'px', 'margin': '0'}">font</h5>
+<h5 class="upperCaseClass">jklbsjslgkdljk</h5>
+<h5 [ngClass]="upperCaseClassV2">jakjsajkasd</h5>
+
+<hr>
+
+<button (click)="showMe()">Click on me</button>
+
+<hr>
